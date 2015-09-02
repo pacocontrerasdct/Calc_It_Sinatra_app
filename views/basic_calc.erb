@@ -1,0 +1,15 @@
+<h1><%= @title %></h1>
+
+<form action="/basic" method="post">
+  <input type="text" name="num_1" placeholder="Introduce the first number" autofocus>
+  <input type="text" name="num_2" placeholder="Introduce the second number">
+  <select name="operation">
+    <option value="add">Add</option>
+    <option value="rest">Rest</option>
+    <option value="multiply">Multiply</option>
+    <option value="divide">Divide</option>
+  </select>
+  <button>Calc It!</button>
+</form>
+
+<h1>Result: <%= @result %></h1>

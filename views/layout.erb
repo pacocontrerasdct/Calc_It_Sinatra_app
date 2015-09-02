@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calc It - A multiple calculator application in Sinatra</title>
+</head>
+<body>
+<h1>NOT ANOTHER SINATRA CALCULATOR</h1>
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/basic">Basic Arithmetics Calc</a></li>
+    <li><a href="/mortgage">Mortgage Calc</a></li>
+    <li><a href="/bmi">Body Mass Index Calc</a></li>
+    <li><a href="/trip">Trip Calc</a></li>
+    <li><a href="/cilinder">Cilinder's Volume Calc</a></li>
+  </ul>
+</nav>
+<!-- 'yield' is going to get all content dynamic from Home, Sports, Weather... and put it here when we call it using the 'a' links so we always are going to have the basic layout, header, menu, etc -->
+<%= yield %>
+
+</body>
+</html>
