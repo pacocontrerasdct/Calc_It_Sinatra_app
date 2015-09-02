@@ -8,9 +8,20 @@ class Arithmetics
     @result = result
   end
   
-  def sum
+  def sum num1, num2
     result = num1 + num2
   end
 
+  def rest num1, num2
+    result = num1 - num2
+  end
+
+  def multi num1, num2
+    result = num1 * num2
+  end
+
+  def div num1, num2
+    result = num1 / num2
+  end
 
 end

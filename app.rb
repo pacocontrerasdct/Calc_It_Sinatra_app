@@ -14,22 +14,27 @@ get '/basic' do
 end
 
 post '/basic' do
-  #puts params
-  num1 = params[:num_1].to_i
-  num2 = params[:num_2].to_i
-  operation = params[:operation]
-  arithmetic_op = Arithmetics.new
-  
+  # puts params
+  num1 = params[:num_1].to_f
+  num2 = params[:num_2].to_f
+  operation = params[:operation].to_s
+  aritop = Arithmetics.new
   @title = 'Basic Calculator: Add, rest, multiply and divide two numbers'
-
-  @result =
-  if operation == 'add'
-      arithmetic_op.sum num1, num2
+  puts num1
+  
+  if operation == "add"
+    result = aritop.sum num1, num2
+  elsif operation == "rest"
+    result = aritop.rest num1, num2
+  elsif operation == "multiply"
+    result = aritop.multi num1, num2
+  elsif operation == "divide"
+    result = aritop.div num1, num2
   else
-      'fail'
+    result = 0
   end
 
-
+  @result = result.to_f.round(4)
   erb :basic_calc
 
 end
