@@ -1,0 +1,11 @@
+<h1><%= @title %></h1>
+
+<form action="/trip" method="post">
+  <input type="text" name="num_1" placeholder="Distance (miles)" autofocus>
+  <input type="text" name="num_2" placeholder="MPG (Miles per Gallon)">
+  <input type="text" name="num_3" placeholder="Cost ($/gallon)">
+  <input type="text" name="num_4" placeholder="Speed (MPH)">
+  <button>Calc It!</button>
+</form>
+
+<h1><%= @result %></h1>

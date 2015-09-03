@@ -1,0 +1,13 @@
+<h1><%= @title %></h1>
+
+<form action="/bmi" method="post">
+  <input type="text" name="num_1" placeholder="Mass (kg.)" autofocus>
+  <input type="text" name="num_2" placeholder="Height (m.)">
+  <select name="system">
+    <option value="metric">Metric</option>
+    <option value="imperial">Imperial</option>
+  </select>
+  <button>Calc It!</button>
+</form>
+
+<h1><%= @result %></h1>
